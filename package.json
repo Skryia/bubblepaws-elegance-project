@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "python3 -m http.server 8080 --directory public",
+    "dev": "node dev-server.mjs",
     "build": "echo 'Static site: no build required'",
-    "preview": "python3 -m http.server 8080 --directory public"
+    "preview": "node dev-server.mjs"
   }
 }
