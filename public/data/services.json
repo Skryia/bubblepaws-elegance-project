@@ -1,0 +1,8 @@
+[
+  { "icon": "fa-bath", "title": "Signature Bath & Dry", "price": "from £22", "desc": "Hand bath with hypoallergenic shampoo, conditioning rinse, blow-out and brush — pure spa, tails wagging." },
+  { "icon": "fa-scissors", "title": "Full Dog Grooming", "price": "from £38", "desc": "Bath, breed-specific cut, ear clean, nail trim and finishing spritz. Tailored to your pup's coat and temperament." },
+  { "icon": "fa-paw", "title": "Puppy First Groom", "price": "from £20", "desc": "A gentle, confidence-building introduction for puppies — short, calm and full of treats." },
+  { "icon": "fa-cut", "title": "Nail Clipping & Paw Care", "price": "from £8", "desc": "Quick, low-stress nail trims with optional pad balm. Drop-in slots welcome." },
+  { "icon": "fa-spray-can-sparkles", "title": "De-Shed Treatment", "price": "from £28", "desc": "Deep-conditioning, undercoat-reducing treatment that leaves your home (and sofa) noticeably calmer." },
+  { "icon": "fa-heart", "title": "Senior & Sensitive Care", "price": "from £30", "desc": "Slower, gentler appointments designed for older dogs and those who need extra patience and reassurance." }
+]
