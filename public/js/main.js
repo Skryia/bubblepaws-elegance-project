@@ -95,9 +95,10 @@
   });
 
   // ---------- Active nav link ----------
-  const path = window.location.pathname.split("/").pop() || "home.html";
+  const file = window.location.pathname.split("/").pop() || "index.html";
+  const path = file === "home.html" ? "index.html" : file;
   $(".nav-links a, .mobile-menu a").each(function () {
-    const href = $(this).attr("href");
+    const href = ($(this).attr("href") || "").split("/").pop();
     if (href === path) $(this).addClass("active");
   });
 })(jQuery);
