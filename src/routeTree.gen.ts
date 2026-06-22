@@ -9,38 +9,201 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ServicesDothtmlRouteImport } from './routes/services[.]html'
+import { Route as HomeDothtmlRouteImport } from './routes/home[.]html'
+import { Route as GalleryDothtmlRouteImport } from './routes/gallery[.]html'
+import { Route as FaqDothtmlRouteImport } from './routes/faq[.]html'
+import { Route as ContactDothtmlRouteImport } from './routes/contact[.]html'
+import { Route as AboutDothtmlRouteImport } from './routes/about[.]html'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as JsSplatRouteImport } from './routes/js.$'
+import { Route as DataSplatRouteImport } from './routes/data.$'
+import { Route as CssSplatRouteImport } from './routes/css.$'
 
+const ServicesDothtmlRoute = ServicesDothtmlRouteImport.update({
+  id: '/services.html',
+  path: '/services.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeDothtmlRoute = HomeDothtmlRouteImport.update({
+  id: '/home.html',
+  path: '/home.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryDothtmlRoute = GalleryDothtmlRouteImport.update({
+  id: '/gallery.html',
+  path: '/gallery.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqDothtmlRoute = FaqDothtmlRouteImport.update({
+  id: '/faq.html',
+  path: '/faq.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactDothtmlRoute = ContactDothtmlRouteImport.update({
+  id: '/contact.html',
+  path: '/contact.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutDothtmlRoute = AboutDothtmlRouteImport.update({
+  id: '/about.html',
+  path: '/about.html',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JsSplatRoute = JsSplatRouteImport.update({
+  id: '/js/$',
+  path: '/js/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DataSplatRoute = DataSplatRouteImport.update({
+  id: '/data/$',
+  path: '/data/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CssSplatRoute = CssSplatRouteImport.update({
+  id: '/css/$',
+  path: '/css/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about.html': typeof AboutDothtmlRoute
+  '/contact.html': typeof ContactDothtmlRoute
+  '/faq.html': typeof FaqDothtmlRoute
+  '/gallery.html': typeof GalleryDothtmlRoute
+  '/home.html': typeof HomeDothtmlRoute
+  '/services.html': typeof ServicesDothtmlRoute
+  '/css/$': typeof CssSplatRoute
+  '/data/$': typeof DataSplatRoute
+  '/js/$': typeof JsSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about.html': typeof AboutDothtmlRoute
+  '/contact.html': typeof ContactDothtmlRoute
+  '/faq.html': typeof FaqDothtmlRoute
+  '/gallery.html': typeof GalleryDothtmlRoute
+  '/home.html': typeof HomeDothtmlRoute
+  '/services.html': typeof ServicesDothtmlRoute
+  '/css/$': typeof CssSplatRoute
+  '/data/$': typeof DataSplatRoute
+  '/js/$': typeof JsSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about.html': typeof AboutDothtmlRoute
+  '/contact.html': typeof ContactDothtmlRoute
+  '/faq.html': typeof FaqDothtmlRoute
+  '/gallery.html': typeof GalleryDothtmlRoute
+  '/home.html': typeof HomeDothtmlRoute
+  '/services.html': typeof ServicesDothtmlRoute
+  '/css/$': typeof CssSplatRoute
+  '/data/$': typeof DataSplatRoute
+  '/js/$': typeof JsSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about.html'
+    | '/contact.html'
+    | '/faq.html'
+    | '/gallery.html'
+    | '/home.html'
+    | '/services.html'
+    | '/css/$'
+    | '/data/$'
+    | '/js/$'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about.html'
+    | '/contact.html'
+    | '/faq.html'
+    | '/gallery.html'
+    | '/home.html'
+    | '/services.html'
+    | '/css/$'
+    | '/data/$'
+    | '/js/$'
+  id:
+    | '__root__'
+    | '/'
+    | '/about.html'
+    | '/contact.html'
+    | '/faq.html'
+    | '/gallery.html'
+    | '/home.html'
+    | '/services.html'
+    | '/css/$'
+    | '/data/$'
+    | '/js/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutDothtmlRoute: typeof AboutDothtmlRoute
+  ContactDothtmlRoute: typeof ContactDothtmlRoute
+  FaqDothtmlRoute: typeof FaqDothtmlRoute
+  GalleryDothtmlRoute: typeof GalleryDothtmlRoute
+  HomeDothtmlRoute: typeof HomeDothtmlRoute
+  ServicesDothtmlRoute: typeof ServicesDothtmlRoute
+  CssSplatRoute: typeof CssSplatRoute
+  DataSplatRoute: typeof DataSplatRoute
+  JsSplatRoute: typeof JsSplatRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/services.html': {
+      id: '/services.html'
+      path: '/services.html'
+      fullPath: '/services.html'
+      preLoaderRoute: typeof ServicesDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home.html': {
+      id: '/home.html'
+      path: '/home.html'
+      fullPath: '/home.html'
+      preLoaderRoute: typeof HomeDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery.html': {
+      id: '/gallery.html'
+      path: '/gallery.html'
+      fullPath: '/gallery.html'
+      preLoaderRoute: typeof GalleryDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq.html': {
+      id: '/faq.html'
+      path: '/faq.html'
+      fullPath: '/faq.html'
+      preLoaderRoute: typeof FaqDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact.html': {
+      id: '/contact.html'
+      path: '/contact.html'
+      fullPath: '/contact.html'
+      preLoaderRoute: typeof ContactDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about.html': {
+      id: '/about.html'
+      path: '/about.html'
+      fullPath: '/about.html'
+      preLoaderRoute: typeof AboutDothtmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +211,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/js/$': {
+      id: '/js/$'
+      path: '/js/$'
+      fullPath: '/js/$'
+      preLoaderRoute: typeof JsSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/data/$': {
+      id: '/data/$'
+      path: '/data/$'
+      fullPath: '/data/$'
+      preLoaderRoute: typeof DataSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/css/$': {
+      id: '/css/$'
+      path: '/css/$'
+      fullPath: '/css/$'
+      preLoaderRoute: typeof CssSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutDothtmlRoute: AboutDothtmlRoute,
+  ContactDothtmlRoute: ContactDothtmlRoute,
+  FaqDothtmlRoute: FaqDothtmlRoute,
+  GalleryDothtmlRoute: GalleryDothtmlRoute,
+  HomeDothtmlRoute: HomeDothtmlRoute,
+  ServicesDothtmlRoute: ServicesDothtmlRoute,
+  CssSplatRoute: CssSplatRoute,
+  DataSplatRoute: DataSplatRoute,
+  JsSplatRoute: JsSplatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
