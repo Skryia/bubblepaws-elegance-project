@@ -95,8 +95,7 @@
   });
 
   // ---------- Active nav link ----------
-  const file = window.location.pathname.split("/").pop() || "index.html";
-  const path = file === "home.html" ? "index.html" : file;
+  const path = window.location.pathname.split("/").pop() || "index.html";
   $(".nav-links a, .mobile-menu a").each(function () {
     const href = ($(this).attr("href") || "").split("/").pop();
     if (href === path) $(this).addClass("active");
