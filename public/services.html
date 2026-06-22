@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Services & Pricing — Bubblepaws Dog Grooming</title>
+<meta name="description" content="From signature bath & dry to full grooms, puppy first-cuts and gentle senior care — premium dog grooming services at Bubblepaws." />
+<meta property="og:title" content="Services & Pricing — Bubblepaws" />
+<meta property="og:description" content="Premium dog grooming services, transparently priced." />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/responsive.css" />
+<link rel="stylesheet" href="./css/animations.css" />
+</head>
+<body>
+
+<header class="nav scrolled">
+  <div class="container nav-inner">
+    <a class="brand" href="./home.html"><span class="brand-mark"><i class="fa-solid fa-paw"></i></span> Bubblepaws</a>
+    <nav><ul class="nav-links">
+      <li><a href="./home.html">Home</a></li><li><a href="./about.html">About</a></li>
+      <li><a href="./services.html">Services</a></li><li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./faq.html">FAQ</a></li><li><a href="./contact.html">Contact</a></li>
+    </ul></nav>
+    <a class="btn btn-primary nav-cta" href="./contact.html">Book a groom <i class="fa-solid fa-arrow-right"></i></a>
+    <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <button class="mobile-menu-close"><i class="fa-solid fa-xmark"></i></button>
+  <a href="./home.html">Home</a><a href="./about.html">About</a><a href="./services.html">Services</a>
+  <a href="./gallery.html">Gallery</a><a href="./faq.html">FAQ</a><a href="./contact.html">Contact</a>
+</div>
+
+<section class="page-hero">
+  <div class="container" data-reveal>
+    <span class="crumb">Services & Pricing</span>
+    <h1>Every coat, every age,<br/>every temperament.</h1>
+    <p>Transparent pricing, breed-aware techniques, and unhurried appointments built around your dog.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="services-grid" id="allServices"></div>
+  </div>
+</section>
+
+<section class="bg-cream-2">
+  <div class="container split">
+    <div data-reveal="left">
+      <span class="eyebrow">Tailored to your dog</span>
+      <h2>Not sure which service is right?</h2>
+      <p>Tell us a little about your dog — their breed, age, coat and any quirks — and we'll recommend the perfect appointment. No pressure, no upselling.</p>
+      <a href="./contact.html" class="btn btn-primary">Ask the groomers <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="split-media" data-reveal="right">
+      <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=1000&q=80" alt="Dog being groomed" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container" data-reveal>
+    <h2>Spaces fill up quickly.</h2>
+    <p>We take a limited number of appointments each week — get in touch to secure yours.</p>
+    <a href="./contact.html" class="btn btn-blush">Request an appointment <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="./home.html"><span class="brand-mark"><i class="fa-solid fa-paw"></i></span> Bubblepaws</a>
+        <p style="margin-top:18px;">A calm, premium dog grooming studio.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61585429742141" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="./contact.html"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div><h4>Explore</h4><ul>
+        <li><a href="./about.html">About</a></li><li><a href="./services.html">Services</a></li>
+        <li><a href="./gallery.html">Gallery</a></li><li><a href="./faq.html">FAQ</a></li></ul></div>
+      <div><h4>Services</h4><ul>
+        <li><a href="./services.html">Full Grooming</a></li><li><a href="./services.html">Bath & Dry</a></li>
+        <li><a href="./services.html">Puppy First Cut</a></li><li><a href="./services.html">Senior Care</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul>
+        <li><i class="fa-solid fa-phone" style="color:var(--blush);margin-right:8px;"></i> 0000 000 000</li>
+        <li><i class="fa-solid fa-envelope" style="color:var(--blush);margin-right:8px;"></i> hello@bubblepaws.co</li>
+        <li><a href="./contact.html">Book an appointment</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="yr"></span> Bubblepaws.</span><span>Design proposal — not yet a live website.</span></div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+  document.getElementById("yr").textContent = new Date().getFullYear();
+  $.getJSON("./data/services.json", function (data) {
+    const html = data.map((s, i) => `
+      <article class="service-card" data-reveal data-reveal-delay="${(i%3)+1}">
+        <div class="service-icon"><i class="fa-solid ${s.icon}"></i></div>
+        <h3>${s.title}</h3>
+        <span class="price">${s.price}</span>
+        <p style="margin-top:12px;">${s.desc}</p>
+        <a href="./contact.html" class="link">Book this <i class="fa-solid fa-arrow-right"></i></a>
+      </article>`).join("");
+    $("#allServices").html(html);
+    document.querySelectorAll("#allServices [data-reveal]").forEach(el => el.classList.add("in-view"));
+  });
+</script>
+<script src="./js/main.js"></script>
+</body>
+</html>

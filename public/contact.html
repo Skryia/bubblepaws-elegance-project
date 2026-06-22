@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact & Book — Bubblepaws Dog Grooming</title>
+<meta name="description" content="Get in touch with Bubblepaws to book an appointment, ask a question, or just say hello. We reply within 24 hours." />
+<meta property="og:title" content="Contact Bubblepaws" />
+<meta property="og:description" content="Book your dog in or get in touch — we reply within 24 hours." />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="./css/style.css" />
+<link rel="stylesheet" href="./css/responsive.css" />
+<link rel="stylesheet" href="./css/animations.css" />
+</head>
+<body>
+
+<header class="nav scrolled">
+  <div class="container nav-inner">
+    <a class="brand" href="./home.html"><span class="brand-mark"><i class="fa-solid fa-paw"></i></span> Bubblepaws</a>
+    <nav><ul class="nav-links">
+      <li><a href="./home.html">Home</a></li><li><a href="./about.html">About</a></li>
+      <li><a href="./services.html">Services</a></li><li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./faq.html">FAQ</a></li><li><a href="./contact.html">Contact</a></li>
+    </ul></nav>
+    <a class="btn btn-primary nav-cta" href="https://www.facebook.com/profile.php?id=61585429742141" target="_blank" rel="noopener">Message on Facebook <i class="fa-brands fa-facebook"></i></a>
+    <button class="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <button class="mobile-menu-close"><i class="fa-solid fa-xmark"></i></button>
+  <a href="./home.html">Home</a><a href="./about.html">About</a><a href="./services.html">Services</a>
+  <a href="./gallery.html">Gallery</a><a href="./faq.html">FAQ</a><a href="./contact.html">Contact</a>
+</div>
+
+<section class="page-hero">
+  <div class="container" data-reveal>
+    <span class="crumb">Contact</span>
+    <h1>Let's get your dog booked in.</h1>
+    <p>Send us a message and we'll be back to you within 24 hours — usually sooner.</p>
+  </div>
+</section>
+
+<section style="padding-top: 30px;">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info-card" data-reveal="left">
+        <span class="eyebrow" style="color:var(--blush-2);">Studio details</span>
+        <h3 style="color:var(--cream);">We'd love to hear from you.</h3>
+        <p>Drop us a line, or message us directly on Facebook for the quickest response.</p>
+        <div class="contact-detail">
+          <i class="fa-solid fa-phone"></i>
+          <div><strong>Call us</strong><span>0000 000 000</span></div>
+        </div>
+        <div class="contact-detail">
+          <i class="fa-solid fa-envelope"></i>
+          <div><strong>Email</strong><span>hello@bubblepaws.co</span></div>
+        </div>
+        <div class="contact-detail">
+          <i class="fa-brands fa-facebook-f"></i>
+          <div><strong>Facebook</strong><span><a href="https://www.facebook.com/profile.php?id=61585429742141" target="_blank" rel="noopener" style="color:var(--blush-2);">@bubblepaws</a></span></div>
+        </div>
+        <div class="contact-detail">
+          <i class="fa-solid fa-clock"></i>
+          <div><strong>Hours</strong><span>Tue – Sat, 9am – 5pm<br/>By appointment only</span></div>
+        </div>
+      </div>
+
+      <form id="contactForm" class="contact-form" novalidate data-reveal="right">
+        <div id="formSuccess" class="form-success"></div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" />
+            <div class="error"></div>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" />
+            <div class="error"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="07000 000000" />
+            <div class="error"></div>
+          </div>
+          <div class="form-field">
+            <label for="dog">Your dog's name & breed</label>
+            <input type="text" id="dog" name="dog" placeholder="Bella – Cockapoo" />
+            <div class="error"></div>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message">Tell us a little about your dog</label>
+          <textarea id="message" name="message" placeholder="Age, coat type, any quirks, the service you're after..."></textarea>
+          <div class="error"></div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+          Send message <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <p class="demo-note">This is a demo form for the design proposal — no data is sent.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" style="margin-top: 60px;">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="./home.html"><span class="brand-mark"><i class="fa-solid fa-paw"></i></span> Bubblepaws</a>
+        <p style="margin-top:18px;">A calm, premium dog grooming studio.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61585429742141" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div><h4>Explore</h4><ul>
+        <li><a href="./about.html">About</a></li><li><a href="./services.html">Services</a></li>
+        <li><a href="./gallery.html">Gallery</a></li><li><a href="./faq.html">FAQ</a></li></ul></div>
+      <div><h4>Services</h4><ul>
+        <li><a href="./services.html">Full Grooming</a></li><li><a href="./services.html">Bath & Dry</a></li>
+        <li><a href="./services.html">Puppy First Cut</a></li><li><a href="./services.html">Senior Care</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul>
+        <li><i class="fa-solid fa-phone" style="color:var(--blush);margin-right:8px;"></i> 0000 000 000</li>
+        <li><i class="fa-solid fa-envelope" style="color:var(--blush);margin-right:8px;"></i> hello@bubblepaws.co</li>
+        <li><a href="./contact.html">Book an appointment</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="yr"></span> Bubblepaws.</span><span>Design proposal — not yet a live website.</span></div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+<script src="./js/main.js"></script>
+<script src="./js/form.js"></script>
+</body>
+</html>
